@@ -18,9 +18,15 @@ resource "aws_instance" "app_server" {
   instance_type = "t2.micro"
 
   key_name = "alura-chave"
+  user_data = <<-EOF
+                 #!/bin/bash
+                 cd home/ubuntu
+                 echo "<h1>Feito com terraform</h1>" > index.html
+                 nohup busybox httpd -f -p 8080 &
+                 EOF
 
   tags = {
-    Name = "Primeira instancia"
+    Name = "teste aws instancia"
   }
 }
 
