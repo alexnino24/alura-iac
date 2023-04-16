@@ -14,7 +14,7 @@
        - django
        - djangorestframework
 
-  - name: verificando se o projeto já foi iniciado
+  - name: Verificando se o projeto já foi iniciado
     stat:
       path: /home/ubuntu/tcc/setup/settings.py
     register: projeto
@@ -22,9 +22,7 @@
   - name: Iniciando o projeto
     shell: '. /home/ubuntu/tcc/venv/bin/activate; django-admin startproject setup /home/ubuntu/tcc/'
     when: not projeto.stat.exists
-  - name: Iniciando o projeto
-    shell: '. /home/ubuntu/tcc/venv/bin/activate; django-admin startproject setup /home/ubuntu/tcc/'
-    ignore_errors: yes
+    #ignore_errors: yes
   - name: Alterando o host do settings
     lineinfile:
       path: /home/ubuntu/tcc/setup/settings.py
