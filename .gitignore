@@ -6,7 +6,7 @@
 *.tfstate
 *.tfstate.*
 *.pem
-iac-DEV
-iac-DEV.pub
-iac-PROD
-iac-PROD.pub
+env/dev/iac-DEV
+env/dev/iac-DEV.pub
+env/prod/iac-PROD
+env/prod/iac-PROD.pub
