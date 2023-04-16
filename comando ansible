@@ -1,0 +1,1 @@
+ansible-playbook playbook.yml -i ../../infra/hosts.yml -u ubuntu --private-key iac-DEV 
