@@ -13,13 +13,13 @@ provider "aws" {
   region  = var.regiao_aws
 }
 
-resource "aws_instance" "app_server" {
-  ami           = "ami-0a695f0d95cefc163"
+resource "aws_instance_template" "maquina" {
+  image_id           = "ami-0a695f0d95cefc163"
   instance_type = var.instancia
 
   key_name = var.chave
   tags = {
-    Name = "terraform-ansible-python"
+    Name = "Terraform Ansible Python"
   }
 }
 
