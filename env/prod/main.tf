@@ -3,6 +3,7 @@ module "aws-prod" {
     instancia = "t2.micro"
     regiao_aws = "us-east-2"
     chave = "iac-PROD"
+    grupo_de_seguranca = "Producao"
 }
 
 output "ip" {
