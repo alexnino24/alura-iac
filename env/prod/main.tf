@@ -4,7 +4,7 @@ module "aws-prod" {
     regiao_aws = "us-east-2"
     chave = "iac-PROD"
     grupo_de_seguranca = "Producao"
-    minino = 1
+    minimo = 1
     maximo = 10
     nomeGrupo = "Prod"
 }
