@@ -13,7 +13,7 @@ provider "aws" {
   region  = var.regiao_aws
 }
 
-resource "aws_instance_template" "maquina" {
+resource "aws_launch_template" "maquina" {
   image_id           = "ami-0a695f0d95cefc163"
   instance_type = var.instancia
 

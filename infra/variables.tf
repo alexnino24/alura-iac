@@ -11,7 +11,7 @@ variable "grupo_de_seguranca"{
     type = string
 
 }
-variable "minino" {
+variable "minimo" {
     type = number
 }
 
