@@ -31,7 +31,7 @@ resource "aws_key_pair" "chaveSSH" {
 }
 
 resource "aws_autoscaling_group" "grupo" {
-  availability_zones = ["${var.regiao_aws}a"]
+  availability_zones = ["${var.regiao_aws}a" , "${var.regiao_aws}b"]
   name = var.nomeGrupo
   max_size = var.maximo
   min_size = var.minimo
